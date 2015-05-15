@@ -1,6 +1,7 @@
 # Write your code here.
 def take_a_number(line, next_person)
   line << next_person
+  puts "Welcome, #{next_person}. You are number #{line.length} in line."
   line.length
 end
 
