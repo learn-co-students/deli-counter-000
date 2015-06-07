@@ -6,7 +6,7 @@ def line(deli)
 		puts "The line is currently empty."
 	else
 		puts "The line is currently: 1. #{deli[0]} 2. #{deli[1]} 3. #{deli[2]}"
-		#fuck it we'll worry about it later
+		#how do you fix enumerator error? 
 	end
 end
 
@@ -24,4 +24,3 @@ def now_serving(deli)
 	end
 end
 
-# Write your code here.
