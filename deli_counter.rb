@@ -1,27 +1,23 @@
-def line(num)
-  if num == []
+def line(cue)
+  if cue == []
     puts "The line is currently empty."
   else
-    line = num.collect.with_index {|customer, i| " #{i+1}. #{customer}"}
-    puts "The line is currently:" + line.join
+    current_line = cue.collect.with_index {|x, i| " #{i + 1}. #{x}"}
+    puts "The line is currently:" + current_line.join
   end
 end
 
-def take_a_number(num, name)
-  if num == []
-    num.push(name).each.with_index {|customer, i| puts "Welcome, #{name}. You are number #{i+1} in line."}
-  else
-    line = num.push(name).collect.with_index {|customer, i| "Welcome, #{name}. You are number #{i+1} in line."}
-    puts line.last
-  end
+def take_a_number(cue, name)
+  cue.push(name)
+  num = cue.length
+  puts "Welcome, #{name}. You are number #{num} in line."
 end
 
-def now_serving(num)
-  if num == []
+def now_serving(cue)
+  if cue == []
     puts "There is nobody waiting to be served!"
   else
-    first = num[0]
+    first = cue.shift
     puts "Currently serving #{first}."
-    num.shift
   end
 end
